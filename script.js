@@ -1,14 +1,14 @@
 //your code here
 class OutOfRangeError extends Error {
-	constructor(message) {
-    super(message);
-    this.name = 'OutOfRangeError';
+  constructor(arg) {
+    super(`Expression should only consist of integers and +-/* characters and not ${arg}`);
+    this.name = "OutOfRangeError";
   }
 }
 
 class InvalidExprError extends Error {
-	constructor(message) {
-    super(message);
-    this.name = 'InvalidExprError';
+  constructor() {
+    super("Expression should not have an invalid combination of expression");
+    this.name = "InvalidExprError";
   }
 }
